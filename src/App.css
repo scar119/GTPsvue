@@ -1,0 +1,68 @@
+
+/* 以下是您需要根据界面设计添加的样式 */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* .link-group {
+  margin-bottom: 2rem;
+} */
+/* App.css */
+.link-group h3 {
+  text-align: center;  /* 使文本居中 */
+  /* 可以添加更多样式，比如字体大小、颜色等 */
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link-item {
+  margin: 1rem;
+  width: 200px;
+  border: none; /* 去掉边框 */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+
+/* App.css */
+.link-button {
+  display: flex;
+  flex-direction: column; /* 从上到下排列 */
+  align-items: center; /* 水平居中 */
+  text-decoration: none;
+  color: inherit;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+  
+  .link-button:hover {
+    transform: translateY(-5px); /* 鼠标悬浮时上移 */
+  }
+  
+  .link-logo {
+    max-width: 50px; /* logo图片的最大宽度 */
+    margin-bottom: 10px; /* logo与文字之间的间距 */
+    border-radius: 50%; /* 使图片变为圆形 */
+    object-fit: cover; /* 确保图片不失真 */
+  }
+  
+  
+  .link-content {
+    text-align: center; /* 文字居中 */
+  }
+  
