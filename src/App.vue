@@ -11,9 +11,9 @@
       <div v-for="link in group.items" :key="link.url" class="link-item">
         <!-- 这里我们将a标签做成一个按钮 -->
         <a :href="link.url" target="_blank" class="link-button">
-          <img :src="`http://127.0.0.1:5000/${link.logo}`" alt="Logo" class="link-logo" />
+          <img :src="`https://flaskapp.fly.dev/${link.logo}`" alt="Logo" class="link-logo" />
 
-          <!-- <img src="http://127.0.0.1:5000/static/logo.png" alt="Test Logo" /> -->
+          <!-- <img src="https://flaskapp.fly.dev/static/logo.png" alt="Test Logo" /> -->
 
           <div class="link-content">
             <h4>{{ link.name }}</h4>
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
   fetchLinks() {
-    fetch('http://127.0.0.1:5000/links')
+    fetch('https://flaskapp.fly.dev/links')
       .then(response => response.json())
       .then(data => {
         console.log('Fetched data:', data); // 添加这行来查看获取的数据
