@@ -20,7 +20,7 @@
         <div v-for="link in group.items" :key="link.url" class="link-item">
           <a :href="link.url" target="_blank" class="link-button">
             <!-- <img :src="`http://127.0.0.1:5000/${link.logo}`" alt="Logo" class="link-logo" /> -->
-            <img :src="`https://flaskapp12.fly.dev/static/${link.logo}`" alt="Logo" class="link-logo" />
+            <img :src="`https://flaskapp12.fly.dev/${link.logo}`" alt="Logo" class="link-logo" />
 
             <div class="link-content">
               <h4>{{ link.name }}</h4>
@@ -74,7 +74,7 @@ export default {
   methods: {
     fetchLinks() {
       // fetch('http://127.0.0.1:5000/links')
-      fetch('https://flaskapp12.fly.dev/static/links')
+      fetch('https://flaskapp12.fly.dev/links')
 
         .then(response => response.json())
         .then(data => {
