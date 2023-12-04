@@ -68,6 +68,8 @@ export default {
   },
   mounted() {
     this.fetchLinks();
+    document.title = '我的硅基老师们';
+    console.log('App.vue mounted!');
   },
   methods: {
     fetchLinks() {
