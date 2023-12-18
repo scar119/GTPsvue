@@ -95,46 +95,65 @@ export default {
 };
 </script>
 
+
 <style src="./App.css">
-.category-sidebar {
-  position: fixed;
-  left: 10px; /* 距离屏幕左侧的距离 */
-  top: 50%; /* 垂直居中于屏幕 */
-  transform: translateY(-50%); /* 向上平移50%的高度，确保完全居中 */
-  width: 200px; /* 宽度，可根据需要调整 */
-  background-color: rgba(128, 128, 128, 0.7); /* 灰色半透明背景 */
-  padding: 10px;
-  border-radius: 10px; /* 圆角 */
-  overflow-y: auto;
-  z-index: 1000; /* 确保在其他元素之上 */
-  max-height: 80%; /* 最大高度，以避免覆盖太多内容 */
+/* 使用更现代的颜色和字体 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-.category-sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* 优化标题和标语样式 */
+header h1 {
+  color: #9d602a; /* 深绿色调 */
+}
+
+header h2 {
+  color: #51e7a1; /* 橙色调 */
+}
+
+/* 侧边栏样式调整 */
+.category-sidebar {
+  /* 保留原有样式 */
 }
 
 .category-sidebar button {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 5px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  border-radius: 5px; /* 按钮圆角 */
+  background-color: #264653; /* 深蓝色调 */
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
 }
 
 .category-sidebar button:hover {
-  background-color: #e0e0e0;
+  background-color: #2a9d8f; /* 深绿色调 */
 }
 
-/* 可能需要调整页面主体内容的样式，以避免被目录遮挡 */
+/* 链接组样式 */
 .link-group {
-  margin-left: 220px; /* 根据实际情况调整 */
+  margin-left: 250px; /* 调整边距以适应侧边栏 */
 }
 
+.link-item {
+  transition: transform 0.3s;
+}
 
-/* 其他样式 */
+.link-item:hover {
+  transform: translateY(-5px); /* 鼠标悬停时轻微上移 */
+}
+
+/* 响应式设计：媒体查询 */
+@media (max-width: 768px) {
+  .link-group {
+    margin-left: 20px;
+  }
+
+  .category-sidebar {
+    left: 0;
+    width: 100%;
+    top: initial;
+    transform: initial;
+  }
+}
+
+/* 其他样式调整 */
 </style>
